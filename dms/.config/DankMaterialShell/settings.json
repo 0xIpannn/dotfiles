@@ -16,7 +16,7 @@
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
   "cornerRadius": 0,
-  "niriLayoutGapsOverride": -1,
+  "niriLayoutGapsOverride": 18,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
   "hyprlandLayoutGapsOverride": -1,
@@ -32,7 +32,7 @@
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "auto",
-  "use24HourClock": true,
+  "clockFormat": "24h",
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -60,6 +60,7 @@
   "blurEnabled": true,
   "blurForegroundLayers": false,
   "blurLayerOutlineOpacity": 0.12,
+  "blurBorderEnabled": true,
   "blurBorderColor": "outline",
   "blurBorderCustomColor": "#ffffff",
   "blurBorderOpacity": 0.35,
@@ -200,6 +201,7 @@
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
+  "mediaUseAlbumArtAccent": false,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
   "audioDeviceScrollVolumeEnabled": false,
@@ -262,12 +264,10 @@
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
-  "greeterUse24HourClock": true,
-  "greeterShowSeconds": false,
-  "greeterPadHours12Hour": false,
   "greeterLockDateFormat": "",
   "greeterFontFamily": "",
   "greeterWallpaperFillMode": "",
+  "greeterPamExternallyManaged": false,
   "greeterSyncPending": false,
   "greeterSyncBaseline": {},
   "mediaSize": 1,
@@ -285,6 +285,7 @@
   "spotlightSectionViewModes": {},
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
+  "niriOverviewLauncherStyle": "full",
   "dankLauncherV2Size": "compact",
   "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": false,
@@ -405,19 +406,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {
-    "preferredWifi": [
-      "Area_52"
-    ]
-  },
-  "bluetoothDevicePins": {
-    "preferredDevice": [
-      "70:5A:6F:6B:7A:2A"
-    ]
-  },
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -495,6 +483,7 @@
   "notificationOverlayEnabled": false,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
+  "notificationForegroundLayers": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -509,6 +498,11 @@
   "maxFprintTries": 15,
   "enableU2f": false,
   "u2fMode": "or",
+  "lockPamPath": "",
+  "lockPamInlineFprint": false,
+  "lockPamInlineU2f": false,
+  "lockPamExternallyManaged": false,
+  "lockU2fPamPath": "",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "lockScreenVideoEnabled": false,
@@ -572,6 +566,7 @@
   "updaterIntervalSeconds": 1800,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
+  "updaterIgnoredPackages": [],
   "displayNameMode": "system",
   "screenPreferences": {
     "notepad": [
@@ -657,9 +652,9 @@
       ],
       "spacing": 8,
       "innerPadding": 4,
-      "bottomGap": -8,
+      "bottomGap": -10,
       "transparency": 0,
-      "widgetTransparency": 0.4,
+      "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": false,
       "gothCornersEnabled": false,
@@ -685,7 +680,8 @@
       "maximizeWidgetIcons": false,
       "clickThrough": false,
       "widgetPadding": 8,
-      "shadowIntensity": 0
+      "shadowIntensity": 0,
+      "barInsetPadding": 4
     }
   ],
   "desktopClockEnabled": false,
@@ -814,8 +810,8 @@
   "frameLauncherArcExtender": false,
   "frameLauncherEdgeHover": false,
   "frameMode": "connected",
-  "barInsetPaddingShared": -1,
-  "barInsetPaddingSyncAll": false,
+  "barInsetPaddingShared": 10,
+  "barInsetPaddingSyncAll": true,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }
