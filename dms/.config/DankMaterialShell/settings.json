@@ -329,7 +329,7 @@
   "iconThemePerMode": false,
   "lastAppliedIconTheme": "",
   "cursorSettings": {
-    "theme": "Adwaita",
+    "theme": "Bibata-Original-Classic",
     "size": 24,
     "niri": {
       "hideWhenTyping": false,
@@ -394,7 +394,7 @@
   "batteryCriticalThreshold": 10,
   "batteryNotifyCritical": true,
   "batteryLowThreshold": 20,
-  "batteryNotifyLow": false,
+  "batteryNotifyLow": true,
   "batteryChargeLimitNotificationType": 0,
   "batteryLowNotificationType": 0,
   "batteryCriticalNotificationType": 1,
