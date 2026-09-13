@@ -35,10 +35,7 @@ window-rule {
 // @id=wr_1780757305295068570 @name=kitty
 window-rule {
     match app-id="^kitty$"
-    opacity 0.90
-    background-effect {
-        blur true
-    }
+    opacity 1.00
 }
 
 // @id=wr_1781081846254330185 @name=discord
@@ -50,16 +47,16 @@ window-rule {
 // @id=wr_1783603413126875361 @name=com.danklinux.dms
 window-rule {
     match app-id="^com.danklinux.dms$"
-    opacity 0.90
+    opacity 1.00
     background-effect {
-        blur true
         xray true
     }
 }
 
 // @id=wr_1783603601300196784 @name=^steam$
 window-rule {
-    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$"
+    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$" is-focused=false
+    open-floating true
     default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
@@ -75,4 +72,35 @@ window-rule {
 window-rule {
     match app-id="zen"
     open-maximized true
+}
+
+// @id=wr_1788969684956399592 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$"
+    open-floating true
+}
+
+// @id=wr_1788971407262881979 @name=kitty
+window-rule {
+    match app-id="^kitty$"
+    background-effect {
+        blur true
+    }
+}
+
+// @id=wr_1789112669591097235 @name=Rule
+window-rule {
+    max-width 1820
+}
+
+// @id=wr_1789209306251880946 @name=steam
+window-rule {
+    match app-id="^steam$" title="^notificationtoasts_10016_desktop$" is-floating=true is-focused=false
+    open-floating true
+}
+
+// @id=wr_1789209492880179466 @name=steam
+window-rule {
+    match app-id="^steam$" title="^notificationtoasts_10022_desktop$" is-floating=true is-active=false is-focused=false
+    open-floating true
 }

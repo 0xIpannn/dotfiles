@@ -275,6 +275,5 @@ include "dms/cursor.kdl"
 include "dms/windowrules.kdl"
 
 // Include custom configs
-include "custom/blur.kdl"
 include "custom/ring-override.kdl"
 include "custom/autostart.kdl"
