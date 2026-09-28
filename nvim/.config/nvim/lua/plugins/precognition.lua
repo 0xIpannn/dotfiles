@@ -4,19 +4,19 @@ return {
   opts = {
     -- startVisible = true,
     -- debounceMs = 0,
-    -- showBlankVirtLine = true,
+    showBlankVirtLine = false,
     -- highlightFullVirtLine = false,
-    -- highlightColor = { link = "Comment" },
+    highlightColor = { link = "Comment" },
     -- targetedMotionHighlightColor = { link = "PrecognitionTargetedMotionDefault" },
     -- textObjectHighlightColors = {
     --     { link = "DiffText" },
     --     { link = "DiffChange" },
     --     { link = "Visual" },
     -- },
-    -- targetedMotionHints = {
-    --     enabled = true,
-    --     prio = 1,
-    -- },
+    targetedMotionHints = {
+      enabled = false,
+      prio = 1,
+    },
     -- hints = {
     --      Caret = { text = "^", prio = 2 },
     --      Dollar = { text = "$", prio = 1 },
