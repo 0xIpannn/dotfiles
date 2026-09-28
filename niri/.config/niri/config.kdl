@@ -83,11 +83,6 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-2" {
-    mode "2560x1600@239.998993"
-    position x=2560 y=0
-    variable-refresh-rate
-}
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -274,6 +269,15 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 include "dms/windowrules.kdl"
 
+// timpa biar ga ke overwrite
+window-rule {
+    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$"
+    open-floating true
+    open-focused false
+    default-floating-position x=0 y=0 relative-to="bottom-right"
+}
+
 // Include custom configs
 include "custom/ring-override.kdl"
 include "custom/autostart.kdl"
+

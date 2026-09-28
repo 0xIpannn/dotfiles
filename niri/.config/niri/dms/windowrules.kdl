@@ -55,8 +55,9 @@ window-rule {
 
 // @id=wr_1783603601300196784 @name=^steam$
 window-rule {
-    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$" is-focused=false
+    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$"
     open-floating true
+    open-focused false
     default-floating-position x=0 y=0 relative-to="bottom-right"
 }
 
@@ -93,14 +94,14 @@ window-rule {
     max-width 1820
 }
 
-// @id=wr_1789209306251880946 @name=steam
+// @id=wr_1789536612948066438 @name=equibop
 window-rule {
-    match app-id="^steam$" title="^notificationtoasts_10016_desktop$" is-floating=true is-focused=false
-    open-floating true
+    match app-id="^equibop$"
+    open-maximized true
 }
 
-// @id=wr_1789209492880179466 @name=steam
+// @id=dms-floating-windows @name=DMS Floating Windows
 window-rule {
-    match app-id="^steam$" title="^notificationtoasts_10022_desktop$" is-floating=true is-active=false is-focused=false
+    match app-id="^com.danklinux.dms$"
     open-floating true
 }
