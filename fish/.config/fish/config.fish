@@ -1,5 +1,6 @@
 set -U fish_greeting ""
 set -Ux EDITOR nvim
+fish_add_path "$HOME/.local/share/flutter/bin"
 
 zoxide init fish | source
 
@@ -17,3 +18,6 @@ if status is-interactive
 end
 
 starship init fish | source
+
+set -Ux __NV_PRIME_RENDER_OFFLOAD 1
+set -Ux __GLX_VENDOR_LIBRARY_NAME nvidia

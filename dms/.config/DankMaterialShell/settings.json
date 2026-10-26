@@ -4,7 +4,7 @@
   "matugenScheme": "scheme-fidelity",
   "popupTransparency": 0.8,
   "floatingWindowSyncGlobal": false,
-  "floatingWindowTransparency": 0.8,
+  "floatingWindowTransparency": 0.9,
   "floatingWindowForegroundLayers": false,
   "cornerRadius": 0,
   "niriLayoutGapsOverride": 18,
@@ -12,6 +12,7 @@
   "barElevationEnabled": false,
   "blurEnabled": true,
   "blurForegroundLayers": false,
+  "dankLauncherV2UnloadOnClose": true,
   "networkPreference": "ethernet",
   "cursorSettings": {
     "theme": "Bibata-Original-Classic",
@@ -32,6 +33,8 @@
   "fontFamily": "Ioskeley Mono",
   "monoFontFamily": "Ioskeley Mono",
   "useSystemSoundTheme": true,
+  "acMonitorTimeout": 7200,
+  "acLockTimeout": 10800,
   "batteryMonitorTimeout": 300,
   "batteryLockTimeout": 600,
   "batterySuspendTimeout": 900,
@@ -39,6 +42,26 @@
   "terminalsAlwaysDark": true,
   "muxType": "zellij",
   "matugenTemplateNeovim": true,
+  "notificationRules": [
+    {
+      "enabled": true,
+      "field": "desktopEntry",
+      "pattern": "org.kde.kdeconnect.daemon",
+      "matchType": "contains",
+      "action": "ignore",
+      "urgency": "low",
+      "bypassDnd": false
+    },
+    {
+      "enabled": true,
+      "field": "desktopEntry",
+      "pattern": "discord",
+      "matchType": "contains",
+      "action": "popup_only",
+      "urgency": "default",
+      "bypassDnd": false
+    }
+  ],
   "osdAlwaysShowValue": true,
   "osdPosition": 0,
   "osdMediaPlaybackEnabled": true,
@@ -145,7 +168,9 @@
       "clickThrough": false,
       "widgetPadding": 8,
       "shadowIntensity": 0,
-      "barInsetPadding": 4
+      "barInsetPadding": 4,
+      "island": false,
+      "attachToScreenEdge": false
     }
   ],
   "desktopClockCustomColor": {
@@ -159,7 +184,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "systemMonitorCustomColor": {
     "r": 1,
@@ -172,7 +198,8 @@
     "hslHue": -1,
     "hslSaturation": 0,
     "hslLightness": 1,
-    "valid": true
+    "valid": true,
+    "rgba": -1
   },
   "desktopWidgetInstances": [
     {
@@ -193,6 +220,15 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
+    },
+    "dms_power": {
+      "trigger": "pw"
+    },
+    "dms_qr_generator": {
+      "trigger": "qrg"
     }
   },
   "barInsetPaddingShared": 10,

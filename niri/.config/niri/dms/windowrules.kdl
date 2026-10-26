@@ -78,7 +78,7 @@ window-rule {
 // @id=wr_1788969684956399592 @name=org.kde.dolphin
 window-rule {
     match app-id="^org.kde.dolphin$"
-    open-floating true
+    open-floating false
 }
 
 // @id=wr_1788971407262881979 @name=kitty
@@ -104,4 +104,33 @@ window-rule {
 window-rule {
     match app-id="^com.danklinux.dms$"
     open-floating true
+}
+
+// @id=wr_1790748727684197545 @name=^com.danklinux.dms$
+window-rule {
+    match app-id="^com.danklinux.dms$"
+    background-effect {
+        xray false
+    }
+}
+
+// @id=wr_1791826114745102508 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^Extracting Files$"
+    open-floating true
+}
+
+// @id=wr_1792260325471361139 @name=org.kde.dolphin
+window-rule {
+    match app-id="^org.kde.dolphin$" title="^File Already Exists — Dolphin$"
+    open-floating true
+}
+
+// @id=wr_1792679543617445417 @name=com.example.otoku
+window-rule {
+    match app-id="^com.example.otoku$"
+    min-width 430
+    max-width 430
+    min-height 932
+    max-height 932
 }
